@@ -1,0 +1,11 @@
+spaghetti코드 리팩토링 목록
+
+1. router 분리
+2. react-query를 사용해 msw로 받아온 데이터 관리
+3. pagination에 있는 페이지 갯수, 한 페이지당 게시물 갯수는 const로 관리
+4. query-key 값은 const로 관리
+5. context로 관리되고 있는 dialog를 사용해서 dialogState를 참조하는 함수를 custom hook으로 분리
+6. comment를 보여주는 로직을 custom hook으로 분리 (중복되는 로직은 아니지만 가독성을 위해서 분리)
+7. styled-components와 관련된 로직은 pages/style.jsx로 분리해서 관리
+8. localStorage와 관련된 로직은 repository 폴더를 사용해서 관리
+9. localStorage에 값이 없으면 홈페이지로 navigate 되는 로직이 재사용되므로 utils에 privateRouter 함수로 관리
